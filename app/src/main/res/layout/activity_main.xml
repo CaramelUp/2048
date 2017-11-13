@@ -1,0 +1,83 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fundo2048"
+    tools:context="com.caramelup.a2048.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pontuação "
+            android:textColor="#90A4AE"
+            android:textSize="24dp"
+            />
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#CFD8DC"
+            android:textSize="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recorde "
+            android:textColor="#90A4AE"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/tvBestScore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#CFD8DC"
+            android:layout_weight="1"
+            android:textSize="24dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnNewGame"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Novo Jogo"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:background="#66000000"
+        android:textSize="24dp"/>
+
+    <FrameLayout
+        android:id="@+id/gameContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <com.caramelup.a2048.GameView
+            android:id="@+id/gameView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/fundo2048"
+            >
+        </com.caramelup.a2048.GameView>
+
+        <com.caramelup.a2048.AnimLayer
+            android:id="@+id/animLayer"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+        </com.caramelup.a2048.AnimLayer>
+    </FrameLayout>
+
+
+</LinearLayout>
